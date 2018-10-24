@@ -8,9 +8,9 @@
 # - Set parameters to following to obtain the trajectory of interest from Figure 7
 # - to see the pulse profiles, plot the auxiliary variable "g1" or "g2"
 
-#figure 8B top (diamond)   - gnab=0.14, gbk=1, gavppulse=0.07, prelavp=0.01
-#figure 8B middle (circle) - gnab=0.18, gbk=0.85, gavppulse=0.055, prelavp=0.0025
-#figure 8B bottom (square) - gnab=0.17, gbk=0.35, gavppulse=0.04, prelavp=0.001
+#figure 8B top (diamond)   - gnab=0.14, gbk=1, gavppulse=0.07, prelpulse=0.01
+#figure 8B middle (circle) - gnab=0.18, gbk=0.85, gavppulse=0.055, prelpulse=0.0025
+#figure 8B bottom (square) - gnab=0.17, gbk=0.35, gavppulse=0.04, prelpulse=0.001
 
 par gnab=0.14
 par gbk=1
@@ -26,7 +26,7 @@ par prel=0.0001
 
 #the following are the maximal desired change during a pulse simulation
 par gavppulse=0.07
-par prelavp=0.01
+par prelpulse=0.01
 
 par gCRHpulse=0
 par gkirpulse=0
@@ -172,7 +172,7 @@ jout=nuc*c2/(c2+kc*kc)
 num nuserca=0.1
 jref = nuserca*c
 
-jrel = (prel+prelavp*g2)*(cer - c)
+jrel = (prel+prelpulse*g2)*(cer - c)
 
 Jmem = Jin - jout
 Jer = jrel - jref

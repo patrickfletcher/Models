@@ -24,13 +24,13 @@
 #figure 4F middle (circle) - gkleak=1.9, kp=0.1, gkirpulse=-1.875, gbk=0.5
 #figure 4F bottom (square) - gkleak=1.9, kp=0.1, gkirpulse=-1.875, gbk=0
 
-#figure 6B top (diamond)   - vmca=-8, CRHvmca=-6, gbk=0.98
-#figure 6B middle (circle) - vmca=-8, CRHvmca=-6, gbk=0.7 
-#figure 6B bottom (square) - vmca=-8, CRHvmca=-6, gbk=0.1 
+#figure 6B top (diamond)   - vmca=-8, vmcapulse=-6, gbk=0.98
+#figure 6B middle (circle) - vmca=-8, vmcapulse=-6, gbk=0.7 
+#figure 6B bottom (square) - vmca=-8, vmcapulse=-6, gbk=0.1 
 
-#figure 7B top (diamond)   - gcrh=0.105, kcabk=2, CRHkcabk=1.4, gbk=1 
-#figure 7B middle (circle) - gcrh=0.105, kcabk=2, CRHkcabk=1.4, gbk=0.5  
-#figure 7B bottom (square) - gcrh=0.105, kcabk=2, CRHkcabk=1.4, gbk=0.1  
+#figure 7B top (diamond)   - gcrh=0.105, kcabk=2, kcabkpulse=1.4, gbk=1 
+#figure 7B middle (circle) - gcrh=0.105, kcabk=2, kcabkpulse=1.4, gbk=0.5  
+#figure 7B bottom (square) - gcrh=0.105, kcabk=2, kcabkpulse=1.4, gbk=0.1  
 
 #figure 7D diamond  - gcrh=0.105, kcabk=2, gbk=0.5 
 #figure 7D circle   - gcrh=0.105, kcabk=3.5, gbk=0.5
@@ -51,8 +51,8 @@ par gCRH=0
 par gCRHpulse=0
 par gkirpulse=0
 par gkleakp=0.0
-par CRHkcabk=0
-par CRHvmca=0
+par kcabkpulse=0
+par vmcapulse=0
 
 # Pulse profiles.  Time to peak is 2*tau, peak value is 1. 
 par kp=1
@@ -94,7 +94,7 @@ inav = gnav*mnainf*mnainf*mnainf*hna*vnadrive
 # ICa
 par gca=1.4
 num smca=10
-mcainf = 1/(1+exp(((vmca+CRHvmca*g)-v)/smca))
+mcainf = 1/(1+exp(((vmca+vmcapulse*g)-v)/smca))
 ical = gca*mcainf*vcadrive
 
 
@@ -139,7 +139,7 @@ num vbk0=0.1
 num snbk=5
 num A=0.11, kshift=18
 cad = -A*ical 
-vnbk   = vbk0-kshift*log(cad/(kcabk+CRHkcabk*g)) 
+vnbk   = vbk0-kshift*log(cad/(kcabk+kcabkpulse*g)) 
 nbkinf = 1/(1+exp((vnbk-v)/snbk))
 ibk = gbk*nbk*vkdrive
 
