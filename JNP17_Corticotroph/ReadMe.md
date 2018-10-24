@@ -1,6 +1,8 @@
 # Model of corticotroph electrical activity
 
-These files were used to generate figures in the manuscript titled "Modeling the diversity of spontaneous and agonist-induced electrical activity in anterior pituitary corticotrophs" by Patrick Allen Fletcher, Hana Zemkova, Stanko S. Stojilkovic, and Arthur Sherman. Journal of Neurophysiology, 2017, Vol. 117 no. 6, DOI: [10.1152/jn.00948.2016](http://dx.doi.org/10.1152/jn.00948.2016) 
+These files were used to generate figures in the manuscript: 
+
+"Modeling the diversity of spontaneous and agonist-induced electrical activity in anterior pituitary corticotrophs" by Patrick Allen Fletcher, Hana Zemkova, Stanko S. Stojilkovic, and Arthur Sherman. Journal of Neurophysiology, 2017, Vol. 117 no. 6, DOI: [10.1152/jn.00948.2016](http://dx.doi.org/10.1152/jn.00948.2016)
 
 # Usage
 
