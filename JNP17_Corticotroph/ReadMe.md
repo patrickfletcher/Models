@@ -13,4 +13,4 @@ Use [XPPaut](http://www.math.pitt.edu/~bard/xpp/xpp.html) to run the simulations
 # Notes:
 
 - Default parameter values are set to produce low-frequency spiking
-- When changing parameters to match different figure panels, make sure to run the simulation to steady state before running a pulse simulation
+- When changing parameters to match different figure panels, make sure to run the simulation to steady state before running a pulse simulation. To disable the pulse, either set tpulse>total or keep the pulse parameter of interest (eg. gCRHpulse) set to zero.
